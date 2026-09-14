@@ -59,6 +59,21 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
 .need li{margin:7px 0;font-size:14px}
 .safe{background:var(--go-bg);border:1px solid #cfe9d9}
 .foot{color:var(--sub);font-size:12px;text-align:center;margin-top:24px;line-height:1.7}
+.pick{display:flex;gap:10px;margin-top:10px}
+.pick>div{flex:1;border-radius:12px;padding:12px 13px;font-size:13px;line-height:1.55}
+.pick .a{background:var(--go-bg);border:1px solid #cfe9d9}
+.pick .b{background:var(--brand-bg);border:1px solid #cfe0fd}
+.pick .h{display:block;font-weight:800;margin-bottom:4px;font-size:14px}
+.pick .a .h{color:var(--go)} .pick .b .h{color:var(--brand)}
+.pick .tag{display:inline-block;font-size:11px;font-weight:800;padding:1px 7px;border-radius:999px;margin-left:5px}
+.pick .a .tag{background:#fff;color:var(--go)} .pick .b .tag{background:#fff;color:var(--brand)}
+@media(max-width:520px){.pick{flex-direction:column}}
+.buy{margin:12px 0 0;padding:0;list-style:none}
+.buy li{display:flex;gap:9px;padding:9px 0;border-top:1px solid var(--line);font-size:14px;align-items:baseline;color:#2b3138}
+.buy li:first-child{border-top:0}
+.buy .k{flex:0 0 auto;width:34px;text-align:center;font-size:11px;font-weight:800;padding:2px 0;border-radius:6px}
+.buy .k.hw{background:var(--brand-bg);color:var(--brand)}
+.buy .k.sw{background:var(--go-bg);color:var(--go)}
 </style>
 </head>
 <body>
@@ -149,6 +164,75 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
         <li><b>확정 전 확인 한 가지</b> — 이 코더의 <b>정확한 세부 모델과 열려 있는 포트(랜/시리얼)</b>만 확인하면 배선·비용이 바로 나옵니다. (기계에 붙은 Domino AS 콜센터 또는 프린터 몸체 라벨로 확인) <b>되는지 여부는 확정 — 됨.</b></li>
       </ul>
     </div>
+  </div>
+
+  <div class="card">
+    <h2>풀세팅 — 뭘 사서 어떻게 놓나 <span style="font-weight:600;font-size:12px;color:var(--sub)">· 사장님 질문에 답</span></h2>
+
+    <div class="item">
+      <p class="q">두뇌는 <b>컴퓨터 1대</b> — 태블릿으로는 안 됩니다</p>
+      <ul>
+        <li>카메라 2대를 <b>동시에</b> 받아서, 제품을 알아보고, 코더에 “이거 찍어” 명령까지 <b>쉬지 않고</b> 돌려야 합니다. 이건 태블릿 성능·연결로는 안정적으로 안 돼요.</li>
+        <li>그래서 <b>작은 컴퓨터 1대가 두뇌</b>가 되고, 태블릿은 그 결과를 <b>보여주는 화면</b>으로만 씁니다(아래).</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <p class="q">본체·모니터 거추장스럽게? <b>안 그래도 됩니다</b> — 둘 중 하나</p>
+      <div class="pick">
+        <div class="a"><span class="h">A. 미니 PC<span class="tag">권장</span></span>손바닥만 한 컴퓨터(팬 없는 산업용)를 <b>모니터 뒤에 숨겨 붙임</b>. 겉에선 모니터만 보여 사실상 올인원. 큰 본체 없음. <b>더 싸고 나중에 바꾸기도 쉬움.</b></div>
+        <div class="b"><span class="h">B. 터치 패널 PC</span>컴퓨터+터치화면이 <b>한 덩어리</b>인 산업용 기기. 본체가 <b>아예 없고</b> 벽·스탠드 하나로 끝. 제일 깔끔하지만 값이 조금 더 나감.</div>
+      </div>
+      <div class="fix" style="margin-top:10px"><b>권장 A</b> — 걱정하신 ‘본체+모니터 거추장’은 안 생깁니다. 미니 PC는 손바닥만 해서 모니터 뒤에 숨고, 공장 먼지·진동도 견디는 산업용이라 라인 옆에 그냥 둬도 됩니다.</div>
+    </div>
+
+    <div class="item">
+      <p class="q">카메라는 <b>랜선 하나</b>로 전원·영상을 같이 (PoE)</p>
+      <ul>
+        <li>산업용 카메라는 <b>랜선 한 가닥</b>에 전원과 영상이 같이 흐릅니다(PoE). 카메라 2대를 작은 <b>랜 허브(PoE 스위치)</b>에 꽂고, 거기서 컴퓨터로 랜선 하나만 가면 끝 — 배선이 깔끔하고 거리가 멀어도 됩니다.</li>
+        <li>보통 웹캠이 아니라 <b>산업용 카메라</b>를 씁니다(움직이는 제품을 흐림 없이, 글자까지 또렷하게). 옆에 <b>LED 조명</b>을 같이 다는데, 글자 읽는 정확도의 절반이 조명입니다.</li>
+        <li>(더 짧고 싸게) USB 카메라로도 되지만 컴퓨터에서 <b>3~5m</b> 안쪽이어야 합니다. 라인이 길면 랜(PoE)이 정답.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <p class="q">코더 연결 = <b>케이블 한 가닥 + 우리 프로그램</b> (따로 살 장치 없음)</p>
+      <ul>
+        <li>Domino 코더 뒤·옆의 <b>랜 포트나 시리얼 포트</b>에 그 컴퓨터를 연결합니다. 그러면 우리 프로그램이 <b>“이번엔 단호박 찍어”</b> 같은 신호를 보내고, 코더는 저장돼 있는 그 제품을 골라 찍습니다.</li>
+        <li>코더에 <b>새 장치를 다는 게 아니라</b>, 케이블 하나 꽂고 우리 프로그램을 컴퓨터에 넣는 것뿐입니다. 기계 개조 없음.</li>
+        <li><b>딱 하나 확인</b> — 이 코더에 어떤 포트가 열려 있는지(랜/시리얼)만 Domino AS로 확인하면 케이블 종류가 정해집니다. <b>되는 건 확정</b>, 확인은 배선 종류를 고르려는 것뿐.</li>
+      </ul>
+    </div>
+
+    <div class="flow">
+      <div class="node"><span class="cam">📷</span>카메라 A·B</div>
+      <span class="arrow">›</span>
+      <div class="node opt">PoE 랜허브<br>(전원+영상)</div>
+      <span class="arrow">›</span>
+      <div class="node">소형 컴퓨터<br>두뇌·프로그램</div>
+      <span class="arrow">›</span>
+      <div class="node cmd">Domino 코더<br>제품 자동 선택</div>
+      <span class="arrow">›</span>
+      <div class="node"><span class="cam">📲</span>화면<br>모니터·태블릿</div>
+    </div>
+    <div class="tip"><b>화면은 두 가지를 같이 써도 됩니다</b> — ① 라인 옆 <b>터치 모니터</b>로 상시 표시, ② 컴퓨터가 결과를 인터넷 화면처럼 띄우면 <b>같은 와이파이의 태블릿·폰</b>에서도 열려서, 사장님이 사무실에서도 봅니다. 태블릿은 이 ②번 용도(보기용)로 딱 좋습니다.</div>
+  </div>
+
+  <div class="card">
+    <h2>실제 준비물 <span style="font-weight:600;font-size:12px;color:var(--sub)">· 이만큼 갖추면 시작</span></h2>
+    <p style="font-size:14px;margin:0 0 4px"><b>우리가 만드는 것</b>(프로그램)과 <b>사서 놓는 것</b>(장비)으로 나뉩니다.</p>
+    <ul class="buy">
+      <li><span class="k hw">장비</span><span><b>소형 컴퓨터 1대</b> — 두뇌 (미니 PC 권장 · 또는 터치 패널 PC)</span></li>
+      <li><span class="k hw">장비</span><span><b>산업용 카메라 2대</b> + 렌즈 + <b>LED 조명 2개</b> (앞·뒤 한 대씩)</span></li>
+      <li><span class="k hw">장비</span><span><b>PoE 랜허브 1개</b> — 카메라 랜선을 모아 컴퓨터로</span></li>
+      <li><span class="k hw">장비</span><span><b>터치 모니터 1대</b> + 거치대 (미니 PC를 택한 경우 · 패널 PC면 불필요)</span></li>
+      <li><span class="k hw">장비</span><span><b>카메라 거치대·프레임</b> — 레일 앞·뒤에 카메라 고정</span></li>
+      <li><span class="k hw">장비</span><span><b>코더 연결 케이블</b> (랜 또는 시리얼 · 포트 확인 후 확정) · 랜선 몇 가닥</span></li>
+      <li><span class="k hw">장비</span><span><b>경광등·부저</b> <span style="color:var(--sub)">(선택)</span> — 개수 초과 시 소리·불빛</span></li>
+      <li><span class="k sw">개발</span><span><b>인식·대조 프로그램</b> — 제품 세기, 라벨 글자·바코드 읽기, 앞뒤 대조·경보, 코더 자동 선택 <b>(우리 몫)</b></span></li>
+      <li><span class="k sw">개발</span><span><b>화면 앱</b> — 품목별 실시간 집계표·경보를 모니터·태블릿에 표시 <b>(우리 몫)</b></span></li>
+    </ul>
+    <div class="tip"><b>거추장스러운 세팅 없이</b> — 큰 본체 대신 손바닥 컴퓨터, 화면은 모니터 하나(+원하면 태블릿), 카메라는 랜선으로 정리. 라인 옆에 깔끔하게 얹는 구성입니다.</div>
   </div>
 
   <div class="card">
