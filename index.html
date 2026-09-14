@@ -112,6 +112,29 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
     <div class="item"><span class="badge b-go">됨</span> &nbsp;라벨기가 <b>디지털 코더(Domino)</b>라, 카메라가 제품을 알아보면 <b>찍을 제품을 자동으로 바꿔줄 수 있음</b> — 로봇팔·롤 교체 필요 없음</div>
   </div>
 
+  <div class="card" style="border-color:#cfe0fd;background:#f4f8ff">
+    <h2>기계랑 어떻게 말을 주고받나 <span style="font-weight:600;font-size:12px;color:var(--sub)">· “샀는데 안 되네”가 안 나오는 이유</span></h2>
+    <p style="font-size:14px;margin:0 0 12px">제일 궁금하고 제일 불안하신 부분이죠 — “<b>다 사놓고 어 안 되네</b>” 그거요. 결론부터 말씀드리면, <b>이 코더는 원래 ‘바깥 컴퓨터가 말을 걸 수 있게’ 만들어진 기계</b>입니다. 우리가 없는 기능을 억지로 만드는 게 아니라, <b>Domino가 이미 넣어둔 기능</b>을 쓰는 겁니다.</p>
+
+    <div class="sub-go"><b>어떻게 붙나</b> — 코더 뒤·옆의 <b>랜(이더넷) 또는 시리얼 포트</b>에 컴퓨터를 <b>케이블 한 가닥</b>으로 연결합니다. 그러면 컴퓨터가 <b>“C070 단호박 찍어”</b> 같은 신호를 보내고, 코더는 저장돼 있는 그 메시지로 바뀝니다. 사람이 터치스크린에서 손으로 고르던 그 동작을 <b>그대로 대신</b>하는 것뿐이에요.</div>
+
+    <p style="font-size:13.5px;color:var(--sub);margin:11px 2px 0">이건 Domino가 <b>‘코드넷(Codenet)’·‘이더넷/IP’</b>라는 이름으로 <b>정식 제공</b>하는 기능이고, 공장 PLC·자동화 업체들이 <b>늘 이렇게</b> 코더를 붙입니다. 우리가 만든 편법이 아니라 <b>매뉴얼에 있는, 남들도 다 쓰는 방식</b>입니다.</p>
+
+    <p style="font-size:14px;font-weight:800;margin:17px 0 6px">왜 “다 샀는데 안 되네”가 안 생기나 <span style="font-weight:600;font-size:12px;color:var(--sub)">· 순서가 핵심</span></p>
+    <ul>
+      <li><b>큰돈은 코더랑 상관없이 무조건 됩니다</b> — 카메라·컴퓨터·프로그램은 <b>‘세고 검사’용</b>이라, 코더에 선 하나 안 꽂아도 <b>그것만으로 완성</b>됩니다(실물 몇 개 vs 라벨 몇 개, 초과 경보). 돈 큰 쪽은 <b>코더 연결이 되든 안 되든 어차피 됩니다.</b></li>
+      <li><b>코더 연결은 맨 끝, 케이블 하나</b> — 자동 전환은 <b>1~3만원짜리 케이블 하나 + 우리 프로그램이 신호 보내기</b>가 전부입니다. 새 장치를 사는 게 아니에요. 이걸 <b>제일 마지막에</b> 붙입니다.</li>
+      <li><b>그래서 “사놓고 안 되는” 구조가 아예 안 나옵니다</b> — 큰 장비 먼저(무조건 됨) → 포트 공짜 확인 → 케이블 하나 사서 붙여 <b>눈으로 확인</b> → 그다음 본격. 위험한 돈이 앞에 놓이질 않습니다.</li>
+    </ul>
+
+    <p style="font-size:14px;font-weight:800;margin:17px 0 6px">사기 전에 <b>공짜로·싸게</b> 확인하는 순서 <span style="font-weight:600;font-size:12px;color:var(--sub)">· 이대로만</span></p>
+    <div class="step"><div class="n">1</div><div class="t"><b>전화 한 통 (공짜)</b>코더에 붙은 <b>Domino AS 번호</b>로 전화해 딱 한 가지만 — “이 코더, 바깥 컴퓨터에서 <b>메시지 선택</b> 되나요? <b>어느 포트</b>(랜/시리얼)로 하면 되나요?” 명판 모델명만 불러주면 바로 답 줍니다.</div></div>
+    <div class="step"><div class="n">2</div><div class="t"><b>케이블만 사서 시험 (1~3만원)</b>알려준 포트에 맞는 케이블 하나 사서 컴퓨터에 연결 → 신호 한 번 보내 <b>코더 화면이 실제로 바뀌는지</b> 눈으로 봅니다. <b>이게 “진짜 되는” 증거.</b> 여기까지 딱 몇 만원.</div></div>
+    <div class="step"><div class="n">3</div><div class="t"><b>증거 본 뒤에 본격</b>바뀌는 걸 확인하고 나서야 카메라·조명·거치까지 갖춰 완성합니다. <b>되는 걸 눈으로 본 다음</b> 큰돈을 씁니다.</div></div>
+
+    <div class="fix"><b>만에 하나</b> 이 코더가 바깥 제어를 정말 못 하는 특이 케이스여도 — 카메라가 <b>“이제 단호박으로 바꾸세요” 알림</b>을 주고 사람이 버튼을 누르면 됩니다. <b>산 장비는 하나도 안 버려집니다</b>(카메라·검사 기능은 그대로 다 쓰니까요). 그래서 어느 쪽이든 <b>돈 날리는 경우가 없습니다.</b></div>
+  </div>
+
   <div class="card" style="border-color:#cfe9d9;background:#f2fbf5">
     <h2>헷갈리시죠? — 돈 안 들이고 ‘일단 해보기’ <span style="font-weight:600;font-size:12px;color:var(--sub)">· 딱 이것만</span></h2>
     <p style="font-size:14px;margin:0 0 12px">크게 갖출 것 없습니다. <b>사장님이 구해오실 중고 올인원 PC</b> 하나 + <b>쿠팡에서 몇 개</b>만 사면 바로 시험해볼 수 있어요. 계속 쓸지 정하기 전에 <b>싸게 먼저 해보는</b> 길입니다. (밑에 산업용 구성은 <b>‘제대로 오래 쓸 때’ 참고용</b>이니 지금은 안 봐도 됩니다.)</p>
