@@ -98,6 +98,11 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
 .sum .small{font-size:12px;font-weight:600;color:#9fb0c4}
 .note{font-size:12px;color:var(--sub);margin-top:11px;line-height:1.7}
 .note b{color:#2b3138}
+pre.code{background:#0f1620;color:#dfe7f2;border-radius:12px;padding:14px 14px;margin:10px 0 0;
+  font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;font-size:12.5px;line-height:1.7;
+  white-space:pre-wrap;word-break:break-word;overflow-x:auto}
+pre.code .c{color:#7fe0a6}
+pre.code .h{color:#ffcf6b;font-weight:700}
 </style>
 </head>
 <body>
@@ -109,7 +114,7 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
     <h2>한 줄 결론</h2>
     <div class="item"><span class="badge b-go">확실히 됨</span> &nbsp;앞·뒤 카메라로 세고 대조해 <b>태블릿에 실시간 표시</b></div>
     <div class="item"><span class="badge b-go">됨</span> &nbsp;라벨을 <b>바꿀 때를 스스로 감지</b> (개수 미리 입력 안 함)</div>
-    <div class="item"><span class="badge b-go">됨</span> &nbsp;라벨기가 <b>디지털 코더(Domino)</b>라, 카메라가 제품을 알아보면 <b>찍을 제품을 자동으로 바꿔줄 수 있음</b> — 로봇팔·롤 교체 필요 없음</div>
+    <div class="item"><span class="badge b-cond">거의 됨 · 확인 1건</span> &nbsp;라벨기가 <b>디지털 코더(Domino)</b>라 <b>찍을 제품을 자동으로 바꾸는 방향</b>은 맞음 — 로봇팔·롤 교체 필요 없음. 단 <b>이 모델이 바깥 명령을 받는지</b>만 Domino 전화로 확정하면 됨(아래 노란 칸)</div>
   </div>
 
   <div class="card" style="border-color:#cfe0fd;background:#f4f8ff">
@@ -118,7 +123,7 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
 
     <div class="sub-go"><b>어떻게 붙나</b> — 코더 뒤·옆의 <b>랜(이더넷) 또는 시리얼 포트</b>에 컴퓨터를 <b>케이블 한 가닥</b>으로 연결합니다. 그러면 컴퓨터가 <b>“C070 단호박 찍어”</b> 같은 신호를 보내고, 코더는 저장돼 있는 그 메시지로 바뀝니다. 사람이 터치스크린에서 손으로 고르던 그 동작을 <b>그대로 대신</b>하는 것뿐이에요.</div>
 
-    <p style="font-size:13.5px;color:var(--sub);margin:11px 2px 0">이건 Domino가 <b>‘코드넷(Codenet)’·‘이더넷/IP’</b>라는 이름으로 <b>정식 제공</b>하는 기능이고, 공장 PLC·자동화 업체들이 <b>늘 이렇게</b> 코더를 붙입니다. 우리가 만든 편법이 아니라 <b>매뉴얼에 있는, 남들도 다 쓰는 방식</b>입니다.</p>
+    <p style="font-size:13.5px;color:var(--sub);margin:11px 2px 0">이건 Domino가 <b>‘코드넷(Codenet)’·‘이더넷/IP’·‘EasyDesign’</b> 같은 이름으로 <b>정식 제공</b>하는 방식이고, 공장 PLC·자동화 업체들이 <b>늘 이렇게</b> 코더를 붙입니다 — 우리가 만든 편법이 아닙니다. <b>다만 사장님 기계(V시리즈)가 이 중 어느 방법을 받는지는 아래 노란 칸에 정직하게 정리</b>했습니다(코드까지 함께).</p>
 
     <p style="font-size:14px;font-weight:800;margin:17px 0 6px">왜 “다 샀는데 안 되네”가 안 생기나 <span style="font-weight:600;font-size:12px;color:var(--sub)">· 순서가 핵심</span></p>
     <ul>
@@ -133,6 +138,32 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
     <div class="step"><div class="n">3</div><div class="t"><b>증거 본 뒤에 본격</b>바뀌는 걸 확인하고 나서야 카메라·조명·거치까지 갖춰 완성합니다. <b>되는 걸 눈으로 본 다음</b> 큰돈을 씁니다.</div></div>
 
     <div class="fix"><b>만에 하나</b> 이 코더가 바깥 제어를 정말 못 하는 특이 케이스여도 — 카메라가 <b>“이제 단호박으로 바꾸세요” 알림</b>을 주고 사람이 버튼을 누르면 됩니다. <b>산 장비는 하나도 안 버려집니다</b>(카메라·검사 기능은 그대로 다 쓰니까요). 그래서 어느 쪽이든 <b>돈 날리는 경우가 없습니다.</b></div>
+  </div>
+
+  <div class="card" style="border-color:#f3d9a8;background:#fffaf0">
+    <h2>“코드넷으로 대체 어떻게 짜냐, 진짜 확인한 거냐” <span style="font-weight:600;font-size:12px;color:var(--sub)">· 정직하게 답합니다</span></h2>
+    <p style="font-size:14px;margin:0 0 12px">말로만 “된다 된다” 하지 말라고 하셨죠. 그래서 <b>Domino가 배포한 실제 통신 규격 문서를 구해 직접 읽었습니다.</b> 지어낸 말이 아니라, 아래가 <b>그 매뉴얼에 적힌 진짜 내용</b>입니다.</p>
+
+    <p style="font-size:14px;font-weight:800;margin:14px 0 4px">① 코드는 이게 거의 전부입니다 — 정말 별거 없어요</p>
+    <p style="font-size:13.5px;color:var(--sub);margin:0 0 2px">코더에 <b>인터넷선(랜)으로 접속</b> → <b>“이 라벨 켜” 한 줄 보내기</b> → 코더가 <b>“됐다”</b>고 답. 문자 몇 글자 주고받는 게 다입니다.</p>
+    <pre class="code"><span class="h"># ① 랜으로 코더에 접속</span>   →  코더 IP의 <b>7000번</b> 문으로 노크
+<span class="h"># ② "라벨 바꿔라" 신호 전송</span> →  ESC @ Y   (딱 4바이트: <b>1B 40 59 04</b>)
+<span class="h"># ③ 코더 대답 확인</span>        →  <span class="c">06</span> 오면 성공 · <span class="c">15</span> 오면 실패</pre>
+    <p style="font-size:13px;color:var(--sub);margin:9px 2px 0">※ 위 <b>포트 7000</b>, <b>1B 40 59 04</b>, <b>성공=06 / 실패=15</b> — 전부 제가 지어낸 게 아니라 <b>Domino 규격 문서(문서번호 EPT033760)에 그대로 적힌 값</b>입니다. 실제 프로그램은 여기에 ‘접속·재시도·기록’ 몇 줄만 더 붙이면 끝이라, <b>반나절이면 짭니다.</b> 이게 “어떻게 개발해서 짜냐”의 답입니다.</p>
+
+    <p style="font-size:14px;font-weight:800;margin:18px 0 6px">② 그런데 — 정직하게 짚을 게 하나 있습니다 <span style="font-weight:600;font-size:12px;color:var(--sub)">· 숨기면 나중에 사장님이 물립니다</span></p>
+    <div class="sub-cond" style="font-size:14px"><b>제가 읽은 그 규격 문서는 Domino ‘잉크젯’ 기종(Ax·A 시리즈)용입니다.</b> 어머니 기계는 <b>‘열전사(TTO) V시리즈’</b> — 같은 Domino지만 <b>계열이 다릅니다.</b> 그래서 V시리즈 사용설명서(문서번호 25276)도 같이 구해 봤더니, <b>랜으로 연결되고 메시지를 저장·전환하는 건 맞지만</b>, 그 설명서엔 <b>‘코드넷’이나 ‘바깥에서 메시지 고르는 명령’이 대놓고 적혀 있진 않았습니다</b>(V시리즈는 보통 <b>터치패드나 EasyDesign PC 프로그램</b>으로 고릅니다).</div>
+    <p style="font-size:14px;margin:12px 2px 4px"><b>그래서 “너 그거 진짜 확인했냐”에 대한 솔직한 답:</b></p>
+    <ul>
+      <li><b>확인한 것</b> ✅ — 코드넷이 <b>실제 있는 정식 규격</b>이라는 것, 그리고 <b>코드로 어떻게 짜는지</b>(위 ①). Domino 코더는 <b>바깥 컴퓨터가 메시지를 고르도록</b> 만들어진 기계가 맞습니다.</li>
+      <li><b>아직 확인 못 한 것</b> ⚠️ — <b>어머니 그 기계(V시리즈)가 위 코드넷을 그대로 받아주는지.</b> V시리즈 설명서엔 안 나와 있어서, <b>제가 여기서 “된다”고 단정하면 그게 거짓말</b>입니다. 안 하겠습니다.</li>
+    </ul>
+
+    <p style="font-size:14px;font-weight:800;margin:18px 0 6px">③ 그 마지막 하나를 <b>공짜로</b> 확정하는 법 <span style="font-weight:600;font-size:12px;color:var(--sub)">· 전화 한 통</span></p>
+    <div class="step"><div class="n">1</div><div class="t"><b>Domino코리아에 전화 (공짜)</b>명판 모델명(V230i 같은 것) 불러주고 딱 한 마디 — “이 기종, <b>바깥 컴퓨터에서 메시지 자동 선택</b> 되나요? 되면 <b>어떤 방법</b>(코드넷 / EasyDesign / 신호선)인가요?” 규격 문서 한 장이면 끝입니다.</div></div>
+    <div class="step"><div class="n">2</div><div class="t"><b>답이 오면 개발은 반나절</b>“코드넷 된다” → 위 ① 그대로. “EasyDesign으로 된다” → <b>같은 모양</b>인데 보내는 상대만 바뀝니다. <b>방법만 정해지면 코드는 짧아요.</b></div></div>
+
+    <div class="fix" style="margin-top:12px"><b>그래서 돈은 안 위험합니다</b> — 이 ‘확인 못 한 하나’가 설령 안 되더라도, <b>카메라·PC·검사 프로그램(비싼 90%)은 코더와 아무 상관없이 그대로 다 됩니다.</b> 못 되는 건 “자동으로 척 바뀌는” 편의 하나뿐이고, 그땐 <b>카메라가 “이제 단호박!” 하고 띄워주면 사람이 톡 누르면</b> 됩니다.</div>
   </div>
 
   <div class="card" style="border-color:#cfe9d9;background:#f2fbf5">
@@ -224,7 +255,7 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
     <div class="sub-go"><b>핵심</b> — 코더 화면에 <b>“현재 메시지: C069 고구마스프”</b>라고 떠 있습니다. 즉 제품 하나하나가 코더 안에 <b>‘메시지(양식)’로 저장</b>돼 있고, <b>제품을 바꾼다 = 저장된 메시지를 골라 바꾸는 일</b>입니다. 롤을 손으로 갈아 끼우는 게 아닙니다.</div>
     <div class="fix"><b>정정</b> — 앞선 검토에서 라벨을 ‘인쇄된 필름 롤 수동 교체’로 봤던 것은 오판이었습니다. 사진 3장(조작판·Domino 몸체·Domino 터치스크린)을 다시 확인해 <b>디지털 코더로 바로잡았습니다.</b></div>
     <ul>
-      <li>이 코더(Domino V시리즈)는 <b>바깥에서 메시지를 골라 바꾸는 기능</b>을 정식 지원합니다(랜선·시리얼·자동화 게이트웨이). 사람이 손으로 ‘메시지들’에서 고르는 그 동작을, <b>우리 시스템이 명령으로 대신</b>합니다.</li>
+      <li>이 코더(Domino V시리즈)는 <b>랜으로 연결되고 메시지를 저장·전환</b>합니다. 사람이 손으로 ‘메시지들’에서 고르는 그 동작을 <b>바깥에서 명령으로 대신하게</b> 하는 게 목표인데, <b>그 정확한 방법(코드넷/EasyDesign/신호선)은 이 모델로 Domino에 확인해야 확정</b>됩니다 — 위 노란 칸에 <b>확인한 것·못 한 것을 정직하게</b> 갈라 놨습니다.</li>
       <li>그래서 요청 3(자동 전환)은 <b>로봇팔 같은 게 필요 없습니다.</b> 카메라가 “이번엔 단호박” 하고 알아보면, 코더에 <b>‘단호박 메시지 찍어’ 신호만</b> 보내면 됩니다.</li>
       <li>코더는 이미 <b>제조일자·소비기한을 자동으로 올려</b> 찍고 있어서, 우리는 <b>“어느 제품이냐”만 자동으로 골라주면</b> 됩니다.</li>
     </ul>
@@ -275,13 +306,13 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
     </div>
 
     <div class="item">
-      <p class="q"><span class="qnum">3</span>기계를 조작해 찍을 제품을 자동으로 바꾸기 <span class="badge b-go">됨</span></p>
-      <div class="sub-go"><b>됩니다.</b> 이 기계는 ‘제어 기능이 없는’ 기계가 아니라, <b>이미 디지털로 제어되는 Domino 코더</b>입니다. 사람이 터치스크린에서 메시지를 고르던 걸, <b>바깥에서 명령으로 고르게</b> 하면 됩니다.</div>
+      <p class="q"><span class="qnum">3</span>기계를 조작해 찍을 제품을 자동으로 바꾸기 <span class="badge b-cond">거의 됨 · 확인 1건</span></p>
+      <div class="sub-cond"><b>방향은 맞습니다.</b> 이 기계는 ‘제어 기능이 없는’ 기계가 아니라 <b>이미 디지털로 제어되는 Domino 코더</b>라, 사람이 터치스크린에서 메시지를 고르던 걸 <b>바깥에서 명령으로 고르게</b> 하는 겁니다. <b>다만 이 V시리즈 모델이 바깥 명령을 받는지·어떤 방법인지는 아직 제가 단정 못 합니다</b>(위 노란 칸에 정직하게 정리). 그 하나만 Domino 전화로 확정하면 됩니다.</div>
       <ul>
         <li><b>자동 전환</b> — 코더 랜선·시리얼로 <b>메시지 자동 선택</b>. 카메라가 제품을 알아보는 순간 코더가 그 제품 라벨로 바뀝니다. 사람이 고를 일이 없어 <b>품목을 잘못 고르는 실수부터 사라집니다.</b></li>
         <li><b>사람 개수 실수 차단 (핵심)</b> — 걱정하신 건 기계 오작동이 아니라 <b>반복작업 중 사람 실수</b>죠(10개 찍을 걸 14개). 앞·뒤 카메라가 실물 수와 찍힌 수를 대조해 <b>초과되는 순간 경보</b>하고, 코더가 디지털 제어라 원하면 <b>초과분은 아예 안 찍히게</b> 막을 수도 있습니다.</li>
         <li><b>품목 재확인</b> — 바꾼 뒤 카메라 B가 찍힌 글자·바코드를 읽어 <b>맞게 바뀌었는지</b> 한 번 더 확인 → 고구마스프 자리에 단호박이 찍히는 것도 차단.</li>
-        <li><b>확정 전 확인 한 가지</b> — 이 코더의 <b>정확한 세부 모델과 열려 있는 포트(랜/시리얼)</b>만 확인하면 배선·비용이 바로 나옵니다. (기계에 붙은 Domino AS 콜센터 또는 프린터 몸체 라벨로 확인) <b>되는지 여부는 확정 — 됨.</b></li>
+        <li><b>확정 전 확인 한 가지 (핵심)</b> — 이 <b>V시리즈 모델이 바깥 명령을 받는지, 받으면 어떤 방법인지</b>를 Domino에 확인해야 합니다. 명판 모델명만 불러주면 규격 문서 한 장으로 답이 옵니다. <b>이게 확정되기 전엔 “무조건 된다”고 말하지 않겠습니다</b> — 위 노란 칸에 확인한 것·못 한 것을 갈라 놨습니다.</li>
       </ul>
     </div>
   </div>
