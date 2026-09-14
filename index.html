@@ -38,6 +38,7 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
   font-size:12px;font-weight:700;text-align:center;line-height:1.35;min-width:60px}
 .node .cam{display:block;color:#7fd1ff;font-size:15px}
 .node.rail{background:#151d27;color:#9fb0c4;border-style:dashed}
+.node.cmd{background:#12321f;color:#7fe0a6;border-color:#2c5c3d}
 .node.opt{opacity:.7}
 .arrow{color:#4a5c72;font-weight:800;font-size:14px}
 .ex{background:var(--bad-bg);border:1px solid #f6cccc;border-radius:12px;padding:12px 14px;margin-top:12px;font-size:13px}
@@ -47,6 +48,8 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
 .sub-go,.sub-cond{font-size:13.5px;padding:10px 12px;border-radius:11px;margin-top:8px}
 .sub-go{background:var(--go-bg)} .sub-go b{color:var(--go)}
 .sub-cond{background:var(--cond-bg)} .sub-cond b{color:var(--cond)}
+.fix{background:#eef7f1;border:1px solid #cfe9d9;border-radius:12px;padding:12px 14px;margin-top:12px;font-size:13px;color:#2b4636}
+.fix b{color:var(--go)}
 .step{display:flex;gap:12px;padding:13px 0;border-top:1px solid var(--line)}
 .step:first-child{border-top:0;padding-top:0}
 .step .n{flex:0 0 auto;width:26px;height:26px;border-radius:8px;background:#151d27;color:#fff;font-weight:800;font-size:13px;
@@ -61,45 +64,45 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
 <body>
 <div class="wrap">
   <h1>공장 라벨 검수·자동 전환 시스템</h1>
-  <p class="lead">카메라로 제품을 세고 라벨을 대조해 태블릿에 보여주고, 라벨 바꿀 때를 스스로 알려주는 시스템 — <b>가능성·방향 검토</b> (기계 사진 확인함 · 확정 견적은 현장 실사 후)</p>
+  <p class="lead">카메라로 제품을 세고 라벨을 대조해 태블릿에 보여주고, 라벨(찍는 제품)을 <b>자동으로 바꿔주는</b> 시스템 — <b>가능성·방향 검토</b> (기계 사진 3장 확인함 · 확정 견적은 현장 실사 후)</p>
 
   <div class="card">
     <h2>한 줄 결론</h2>
     <div class="item"><span class="badge b-go">확실히 됨</span> &nbsp;앞·뒤 카메라로 세고 대조해 <b>태블릿에 실시간 표시</b></div>
-    <div class="item"><span class="badge b-go">됨</span> &nbsp;라벨을 <b>바꿀 때를 스스로 감지해 알림</b> (개수 미리 입력 안 함)</div>
-    <div class="item"><span class="badge b-cond">기계 확인됨</span> &nbsp;라벨 = 용기에 붙이는 <b>인쇄된 덮개 필름(롤)</b> → 롤 자동 교체는 배보다 배꼽이라 <b>“바꾸세요” 알림 + 바꾼 뒤 카메라 재확인</b>이 정답</div>
+    <div class="item"><span class="badge b-go">됨</span> &nbsp;라벨을 <b>바꿀 때를 스스로 감지</b> (개수 미리 입력 안 함)</div>
+    <div class="item"><span class="badge b-go">됨</span> &nbsp;라벨기가 <b>디지털 코더(Domino)</b>라, 카메라가 제품을 알아보면 <b>찍을 제품을 자동으로 바꿔줄 수 있음</b> — 로봇팔·롤 교체 필요 없음</div>
   </div>
 
   <div class="card">
-    <h2>기계 확인 결과 <span style="font-weight:600;font-size:12px;color:var(--sub)">· 사진 받음 (2026-09-14)</span></h2>
-    <p style="font-size:14px;margin:0 0 10px">보내주신 기계는 <b>자동식 용기포장기 (TPS-TS4E · MAP포장)</b> — 용기 위에 <b>인쇄된 덮개 필름</b>을 열로 붙여 밀봉하는 <b>실링기</b>입니다. 조작판엔 온도 조절기(접착온도·날인온도)만 있습니다.</p>
-    <div class="sub-cond"><b>그래서 “라벨을 바꾼다” = 필름 롤을 손으로 갈아 끼우는 일</b>입니다. 기계에 신호를 보내거나 버튼을 눌러 바뀌는 게 아니라, 물리적으로 롤을 교체합니다.</div>
+    <h2>기계 확인 결과 <span style="font-weight:600;font-size:12px;color:var(--sub)">· 사진 3장 확인 (2026-09-14)</span></h2>
+    <p style="font-size:14px;margin:0 0 10px">보내주신 기계는 <b>자동식 용기포장기(TPS-TS4E)</b>에 <b>Domino 디지털 코더</b>(열전사 프린터 · V시리즈)가 붙어 있는 구조입니다. 이 코더가 포장 필름 위에 <b>제품명·원재료·제조일자·소비기한까지 글자를 직접 인쇄</b>합니다.</p>
+    <div class="sub-go"><b>핵심</b> — 코더 화면에 <b>“현재 메시지: C069 고구마스프”</b>라고 떠 있습니다. 즉 제품 하나하나가 코더 안에 <b>‘메시지(양식)’로 저장</b>돼 있고, <b>제품을 바꾼다 = 저장된 메시지를 골라 바꾸는 일</b>입니다. 롤을 손으로 갈아 끼우는 게 아닙니다.</div>
+    <div class="fix"><b>정정</b> — 앞선 검토에서 라벨을 ‘인쇄된 필름 롤 수동 교체’로 봤던 것은 오판이었습니다. 사진 3장(조작판·Domino 몸체·Domino 터치스크린)을 다시 확인해 <b>디지털 코더로 바로잡았습니다.</b></div>
     <ul>
-      <li><b>롤을 자동으로 갈아 끼우는 장치</b>는 비전 시스템 전체보다 비싸고, 밀봉 품질까지 건드려 위험 → <b>권장하지 않습니다.</b></li>
-      <li>대신 <b>“이제 단호박 롤로 바꾸세요” 알림</b> + 바꾼 뒤 <b>카메라가 새 필름이 맞는지 재확인</b> → 엉뚱한 롤을 끼우면 즉시 잡아냅니다. <b>사장님이 걱정하신 오라벨은 여기서 막힙니다.</b></li>
-      <li>세고 대조하는 카메라(요청 1·2)는 이 기계 그대로 전부 됩니다 — 기계는 손 안 댑니다.</li>
+      <li>이 코더(Domino V시리즈)는 <b>바깥에서 메시지를 골라 바꾸는 기능</b>을 정식 지원합니다(랜선·시리얼·자동화 게이트웨이). 사람이 손으로 ‘메시지들’에서 고르는 그 동작을, <b>우리 시스템이 명령으로 대신</b>합니다.</li>
+      <li>그래서 요청 3(자동 전환)은 <b>로봇팔 같은 게 필요 없습니다.</b> 카메라가 “이번엔 단호박” 하고 알아보면, 코더에 <b>‘단호박 메시지 찍어’ 신호만</b> 보내면 됩니다.</li>
+      <li>코더는 이미 <b>제조일자·소비기한을 자동으로 올려</b> 찍고 있어서, 우리는 <b>“어느 제품이냐”만 자동으로 골라주면</b> 됩니다.</li>
     </ul>
-    <p style="font-size:12.5px;color:var(--sub);margin:10px 2px 0">보너스: 온도 조절기가 통신형(RS-485)이면 접착·날인 온도를 태블릿에서 같이 모니터링해 밀봉 불량도 예방 가능 (현장 모델 확인 시).</p>
   </div>
 
   <div class="card">
     <h2>어떻게 놓이나</h2>
     <div class="flow">
-      <div class="node opt">쟁반 촬영<br><span style="font-weight:600;opacity:.8">(선택)</span></div>
-      <span class="arrow">›</span>
       <div class="node rail">레일</div>
       <span class="arrow">›</span>
-      <div class="node"><span class="cam">📷</span>카메라 A<br>라벨 전·실물</div>
+      <div class="node"><span class="cam">📷</span>카메라 A<br>제품 인식·실물 수</div>
       <span class="arrow">›</span>
-      <div class="node rail">포장기<br>필름 실링</div>
+      <div class="node">소형 PC<br>인식·판단</div>
       <span class="arrow">›</span>
-      <div class="node"><span class="cam">📷</span>카메라 B<br>라벨 후</div>
+      <div class="node cmd">Domino 코더에<br>“이 제품 찍어” 명령</div>
       <span class="arrow">›</span>
-      <div class="node">소형 PC<br>인식·대조</div>
+      <div class="node rail">포장기+코더<br>필름 실링·인쇄</div>
       <span class="arrow">›</span>
-      <div class="node"><span class="cam">📲</span>태블릿</div>
+      <div class="node"><span class="cam">📷</span>카메라 B<br>찍힌 라벨 재확인</div>
+      <span class="arrow">›</span>
+      <div class="node"><span class="cam">📲</span>태블릿<br>집계·경보</div>
     </div>
-    <p style="font-size:12.5px;color:var(--sub);margin:10px 2px 0">카메라 2대는 기존 라인을 <b>지켜보기만</b> 합니다 — 라인을 멈추거나 기계를 건드리지 않습니다.</p>
+    <p style="font-size:12.5px;color:var(--sub);margin:10px 2px 0">카메라는 라인을 <b>지켜보기만</b> 하고, 코더에는 사람이 손으로 하던 <b>‘메시지 고르기’와 똑같은 신호</b>만 보냅니다 — 라인을 멈추거나 기계를 개조하지 않습니다.</p>
   </div>
 
   <div class="card">
@@ -110,7 +113,7 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
       <ul>
         <li>1~2초마다 두 카메라가 촬영 → 제품 <b>종류와 개수</b>를 자동 인식</li>
         <li>라벨 전(실물 수)과 라벨 후(라벨 수)를 <b>대조</b>, 안 맞으면 즉시 경보</li>
-        <li>라벨의 <b>글자·바코드까지 확인</b> → 엉뚱한 라벨(한우오색 자리에 단호박)도 잡아냄</li>
+        <li>코더가 찍은 <b>글자·바코드까지 확인</b> → 엉뚱한 제품(고구마스프 자리에 단호박)도 잡아냄</li>
         <li>태블릿엔 품목별 실시간 집계 표 (실물 / 라벨 / 차이)</li>
       </ul>
       <div class="ex">예: 실물 <b>12개</b> · 라벨 <b>14개</b> → <b>“라벨 2개 초과”</b> 빨간 경보로 바로 표시</div>
@@ -118,42 +121,40 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
     </div>
 
     <div class="item">
-      <p class="q"><span class="qnum">2</span>라벨 바꿀 때를 스스로 감지 → 알림 <span class="badge b-go">됨</span></p>
+      <p class="q"><span class="qnum">2</span>라벨 바꿀 때를 스스로 감지 <span class="badge b-go">됨</span></p>
       <ul>
-        <li>레일 위 제품 종류를 계속 인식 → <b>한우오색이 끝나고 단호박이 시작되는 순간</b>을 자동 감지</li>
-        <li>“이제 단호박으로 바꾸세요” 알림 (태블릿·소리)</li>
+        <li>레일 위 제품 종류를 계속 인식 → <b>고구마스프가 끝나고 단호박이 시작되는 순간</b>을 자동 감지</li>
         <li>요청하신 대로 <b>개수를 미리 입력하지 않습니다</b> — 그냥 보고 판단</li>
         <li>쟁반을 올리기 전 한 장 찍어두면 <b>다음에 뭐가 올지 미리</b> 알 수도 있음 (선택)</li>
       </ul>
     </div>
 
     <div class="item">
-      <p class="q"><span class="qnum">3</span>제어 기능 없는 기계에 보조장치로 제어 추가 <span class="badge b-cond">알림형 권장</span></p>
-      <div class="sub-go"><b>지금 바로 되는 것</b> — “바꿀 때”를 감지해 <b>사람에게 알림</b>. 기계 손 안 대고, 위험 0. 가치의 대부분이 여기서 나옵니다.</div>
-      <div class="sub-cond"><b>기계를 자동으로 바꾸는 것</b>은 기계에 달렸습니다:</div>
+      <p class="q"><span class="qnum">3</span>기계를 조작해 찍을 제품을 자동으로 바꾸기 <span class="badge b-go">됨</span></p>
+      <div class="sub-go"><b>됩니다.</b> 이 기계는 ‘제어 기능이 없는’ 기계가 아니라, <b>이미 디지털로 제어되는 Domino 코더</b>입니다. 사람이 터치스크린에서 메시지를 고르던 걸, <b>바깥에서 명령으로 고르게</b> 하면 됩니다.</div>
       <ul>
-        <li>랜·시리얼 포트가 있고 <b>디지털로 라벨을 바꾸는</b> 기계 → 명령을 보내 자동 전환 (가장 깔끔)</li>
-        <li><b>버튼만</b> 있는 기계 → 버튼 위에 누르는 장치(작은 액추에이터·릴레이)를 얹어 자동화</li>
-        <li><b style="color:var(--cond)">← 이번 기계가 여기 해당.</b> 라벨 롤을 <b>손으로 갈아 끼우는</b> 방식 → 자동화는 로봇팔급이라 배보다 배꼽 → <b>알림만</b> 권장</li>
+        <li><b>자동 전환</b> — 코더 랜선·시리얼로 <b>메시지 자동 선택</b>. 카메라가 제품을 알아보는 순간 코더가 그 제품 라벨로 바뀝니다.</li>
+        <li><b>닫힌 검증</b> — 바꾼 뒤 카메라 B가 실제로 <b>찍힌 글자·바코드를 읽어 맞게 바뀌었는지 재확인</b> → 엉뚱한 라벨을 원천 차단. 사장님이 걱정하신 오라벨이 여기서 막힙니다.</li>
+        <li><b>확정 전 확인 한 가지</b> — 이 코더의 <b>정확한 세부 모델과 열려 있는 포트(랜/시리얼)</b>만 확인하면 배선·비용이 바로 나옵니다. (기계에 붙은 Domino AS 콜센터 또는 프린터 몸체 라벨로 확인) <b>되는지 여부는 확정 — 됨.</b></li>
       </ul>
-      <p style="font-size:13px;color:var(--sub);margin:10px 2px 0">→ 사진으로 확인한 결과 <b>이번 기계는 세 번째(손으로 롤 교체)</b>입니다. 그래서 <b>알림형</b>으로 갑니다.</p>
     </div>
   </div>
 
   <div class="card">
     <h2>이렇게 진행하면 됩니다</h2>
-    <div class="step"><div class="n">0</div><div class="t"><b>검증 (1~2주)</b>제품 사진 몇 종으로 인식 정확도 시험 + 기계 실사 → 이때 <b>정확한 견적</b>이 나옵니다.</div></div>
-    <div class="step"><div class="n">1</div><div class="t"><b>핵심 (카메라+태블릿)</b>카메라 2대 · 소형 PC · 태블릿으로 세고·대조·경보·“바꿀 때” 알림. 기계는 안 건드림. <b>여기서 가치 대부분 확보.</b></div></div>
-    <div class="step"><div class="n">2</div><div class="t"><b>선택 (자동 제어)</b>기계가 허용하면 라벨 전환까지 자동으로. 기계 실사 후 결정.</div></div>
+    <div class="step"><div class="n">0</div><div class="t"><b>검증 (1~2주)</b>제품 사진 몇 종으로 인식 정확도 시험 + 코더 모델·포트 확인 → 이때 <b>정확한 견적</b>이 나옵니다.</div></div>
+    <div class="step"><div class="n">1</div><div class="t"><b>핵심 (카메라+태블릿)</b>카메라 2대 · 소형 PC · 태블릿으로 세고·대조·경보·“바꿀 때” 감지. 기계는 안 건드림.</div></div>
+    <div class="step"><div class="n">2</div><div class="t"><b>자동 전환 (코더 연동)</b>코더에 랜/시리얼로 연결해 <b>제품을 알아보면 라벨을 자동으로 전환</b> + 찍힌 라벨 재확인. 로봇·개조 없음.</div></div>
   </div>
 
   <div class="card">
     <h2>이제 필요한 것 <span style="font-weight:600;font-size:12px;color:var(--sub)">· 기계 확인됨, 남은 건 아래</span></h2>
     <ul class="need">
-      <li><s style="color:var(--sub)">기계 모델</s> → <b>확인됨</b> (TPS-TS4E 용기포장기 · 필름 실링)</li>
-      <li><b>제품 종류 목록</b> + 품목별 샘플 사진 몇 장 (한우오색·단호박 등 — 인식 학습용)</li>
-      <li>지금 <b>필름 롤 바꾸는 장면 영상</b> 짧게 — 몇 초 걸리는지, 얼마나 자주 바꾸는지</li>
-      <li>레일 <b>속도</b>와 그 자리 <b>조명</b> 상태, 필름·용기에 <b>바코드</b> 있는지</li>
+      <li><s style="color:var(--sub)">기계 종류</s> → <b>확인됨</b> (Domino 디지털 코더 · V시리즈 · 터치스크린)</li>
+      <li>코더의 <b>정확한 세부 모델 + 열린 포트(랜/시리얼)</b> — Domino AS(기계에 붙은 콜센터) 또는 프린터 몸체 라벨로 확인. <b>자동 전환 배선·비용 확정용</b></li>
+      <li>코더에 저장된 <b>제품(메시지) 목록</b> (한우오색·단호박·고구마스프 등 — 카메라 인식과 자동 선택 매칭용)</li>
+      <li>품목별 <b>샘플 사진 몇 장</b> (인식 학습용)</li>
+      <li>레일 <b>속도</b>와 그 자리 <b>조명</b> 상태, 라벨에 <b>바코드</b> 있는지</li>
       <li>카메라 달 <b>레일 앞·뒤 공간</b> 사진 (설치 위치 잡기용)</li>
     </ul>
   </div>
@@ -162,11 +163,11 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
     <h2>안전</h2>
     <ul>
       <li>카메라 시스템은 <b>지켜보기만</b> — 기존 생산 라인을 멈추거나 기계를 바꾸지 않습니다.</li>
-      <li>기계 개조(2단계)는 <b>현장 실사·안전 확인 후에만</b> 진행합니다.</li>
+      <li>코더 연동(2단계)은 사람이 손으로 하던 <b>‘메시지 고르기’와 같은 신호</b>만 보냅니다 — 인쇄 품질·밀봉 기능은 건드리지 않습니다. 현장 실사·확인 후 진행합니다.</li>
     </ul>
   </div>
 
-  <p class="foot">정확한 비용·일정은 기계 실사 후 확정됩니다.<br>이 문서는 가능성과 방향을 정리한 검토용입니다.</p>
+  <p class="foot">정확한 비용·일정은 코더 모델·포트 확인과 현장 실사 후 확정됩니다.<br>이 문서는 가능성과 방향을 정리한 검토용입니다.</p>
 </div>
 </body>
 </html>
