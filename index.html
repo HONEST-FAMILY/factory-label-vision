@@ -74,6 +74,30 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
 .buy .k{flex:0 0 auto;width:34px;text-align:center;font-size:11px;font-weight:800;padding:2px 0;border-radius:6px}
 .buy .k.hw{background:var(--brand-bg);color:var(--brand)}
 .buy .k.sw{background:var(--go-bg);color:var(--go)}
+.mpc{border:1px solid var(--line);border-radius:12px;padding:12px 13px;margin-top:10px}
+.mpc.rec{background:var(--go-bg);border-color:#cfe9d9}
+.mpc .h{font-weight:800;font-size:14.5px}
+.mpc .h .tag{display:inline-block;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-left:6px;background:var(--go);color:#fff;vertical-align:middle}
+.mpc .h .tag.g{background:#8892a0}
+.mpc .s{font-size:13px;color:var(--sub);margin:4px 0 9px;line-height:1.55}
+.mpc .s b{color:#2b3138}
+.mpc .pr{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.mpc .won{font-weight:800;font-size:15px}
+.lk{display:inline-block;font-size:12px;font-weight:700;color:var(--brand);background:var(--brand-bg);
+  border:1px solid #cfe0fd;border-radius:8px;padding:6px 11px;text-decoration:none;white-space:nowrap}
+.budget{margin:12px 0 0;padding:0;list-style:none}
+.budget>li{padding:12px 0;border-top:1px solid var(--line)}
+.budget>li:first-child{border-top:0;padding-top:2px}
+.budget .t{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.budget .nm{font-weight:800;font-size:14px}
+.budget .won{font-weight:800;font-size:14px;white-space:nowrap;color:var(--ink)}
+.budget .d{font-size:12.5px;color:var(--sub);margin:4px 0 0;line-height:1.55}
+.opt-note{color:var(--cond);font-weight:700}
+.sum{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#0f1620;color:#fff;
+  border-radius:12px;padding:13px 15px;margin-top:14px;font-weight:800;font-size:15px}
+.sum .small{font-size:12px;font-weight:600;color:#9fb0c4}
+.note{font-size:12px;color:var(--sub);margin-top:11px;line-height:1.7}
+.note b{color:#2b3138}
 </style>
 </head>
 <body>
@@ -233,6 +257,80 @@ li{margin:5px 0;font-size:14px;color:#2b3138}
       <li><span class="k sw">개발</span><span><b>화면 앱</b> — 품목별 실시간 집계표·경보를 모니터·태블릿에 표시 <b>(우리 몫)</b></span></li>
     </ul>
     <div class="tip"><b>거추장스러운 세팅 없이</b> — 큰 본체 대신 손바닥 컴퓨터, 화면은 모니터 하나(+원하면 태블릿), 카메라는 랜선으로 정리. 라인 옆에 깔끔하게 얹는 구성입니다.</div>
+  </div>
+
+  <div class="card">
+    <h2>미니 PC — 지금 사실 것 <span style="font-weight:600;font-size:12px;color:var(--sub)">· 두뇌, 제일 먼저 구입</span></h2>
+    <p style="font-size:14px;margin:0 0 4px">쓰임에 따라 셋 중 하나입니다. <b>어떤 경우든 부족하지 않게 가려면 B(권장)</b>를 사면 됩니다.</p>
+
+    <div class="mpc">
+      <div class="h">A. 시작형 (제일 쌈)<span class="tag g">저가</span></div>
+      <div class="s">인텔 N100/N150 · 16GB · SSD 512GB (예: 비링크 S12 Pro, GMKtec G3)<br>라벨에 <b>바코드가 있어</b> 개수 세기·바코드 읽기 위주면 이걸로 시작해도 됩니다.</div>
+      <div class="pr"><span class="won">22~28만원</span><a class="lk" href="https://search.shopping.naver.com/search/all?query=미니PC%20N100%2016GB" target="_blank" rel="noopener">최저가 보기 ›</a></div>
+    </div>
+
+    <div class="mpc rec">
+      <div class="h">B. 권장 — 이걸 사세요<span class="tag">권장</span></div>
+      <div class="s">라이젠7(8845HS) 또는 인텔 코어 울트라5 · <b>32GB</b> · NPU 내장 (예: GMKtec K8/K9, 미니스포럼 UM890, 비링크 SER8)<br>라벨 <b>글자까지 읽어(OCR)</b> 정확히 대조하려면 여유 있는 이 급이 안전합니다. 오래 써도 부족함 없음.</div>
+      <div class="pr"><span class="won">60~85만원</span><a class="lk" href="https://search.shopping.naver.com/search/all?query=미니PC%20라이젠7%2032GB" target="_blank" rel="noopener">최저가 보기 ›</a></div>
+    </div>
+
+    <div class="mpc">
+      <div class="h">C. 공장 환경형<span class="tag g">먼지·열 심할 때</span></div>
+      <div class="s">팬 없는 <b>산업용 미니PC</b> · 방진·넓은 온도 (예: 산업용 팬리스 미니PC N100/N305)<br>라인 바로 옆이라 먼지·진동·열이 심하면 일반 미니PC 대신 이걸로.</div>
+      <div class="pr"><span class="won">40~70만원</span><a class="lk" href="https://search.shopping.naver.com/search/all?query=산업용%20팬리스%20미니PC" target="_blank" rel="noopener">최저가 보기 ›</a></div>
+    </div>
+
+    <div class="fix" style="margin-top:12px"><b>정리</b> — 지금 바로 사실 거면 <b>B(라이젠7/코어울트라 32GB, 60~85만원)</b>. 라벨에 이미 바코드가 있으면 A(22~28만원)로 시작해도 충분합니다. (AI 전용 보드 ‘젯슨 오린 나노’ 35만원대도 되지만, 개발·운영이 번거로워 일반 미니 PC를 권합니다.)</div>
+  </div>
+
+  <div class="card">
+    <h2>장비 예산표 <span style="font-weight:600;font-size:12px;color:var(--sub)">· 뭘 얼마에 사나 (2026-09 시장 예상가)</span></h2>
+    <ul class="budget">
+      <li>
+        <div class="t"><span class="nm">① 미니 PC (두뇌) 1대</span><span class="won">60~85만</span></div>
+        <div class="d">위 ‘미니 PC’ 참고. 저가로 가면 22만원부터.</div>
+      </li>
+      <li>
+        <div class="t"><span class="nm">② 산업용 카메라 2대</span><span class="won">80~110만</span></div>
+        <div class="d">랜선 하나로 전원·영상(PoE) 되는 머신비전 카메라(예: HIKROBOT 2MP GigE). 대당 40~55만. <span class="opt-note">가까우면(3~5m) USB형으로 대당 20~35만까지 절약.</span> <a class="lk" href="https://search.shopping.naver.com/search/all?query=산업용카메라%20머신비전%20GigE" target="_blank" rel="noopener">종류·가격 보기 ›</a></div>
+      </li>
+      <li>
+        <div class="t"><span class="nm">③ 렌즈 2개</span><span class="won">16~30만</span></div>
+        <div class="d">카메라용 C마운트 렌즈(8~12mm). 대당 8~15만. <a class="lk" href="https://search.shopping.naver.com/search/all?query=머신비전%20렌즈%20C마운트" target="_blank" rel="noopener">보기 ›</a></div>
+      </li>
+      <li>
+        <div class="t"><span class="nm">④ LED 조명 2개</span><span class="won">12~24만</span></div>
+        <div class="d">글자 읽는 정확도의 절반이 조명. 머신비전용 바 라이트. <a class="lk" href="https://search.shopping.naver.com/search/all?query=머신비전%20LED%20바라이트%20조명" target="_blank" rel="noopener">보기 ›</a></div>
+      </li>
+      <li>
+        <div class="t"><span class="nm">⑤ PoE 랜허브 1개</span><span class="won">4~8만</span></div>
+        <div class="d">카메라 랜선을 모아 PC로 (PoE 카메라 쓸 때만). <a class="lk" href="https://search.shopping.naver.com/search/all?query=PoE%20스위치%20허브" target="_blank" rel="noopener">보기 ›</a></div>
+      </li>
+      <li>
+        <div class="t"><span class="nm">⑥ 모니터 1대</span><span class="won">12~18만</span></div>
+        <div class="d">24인치 일반 모니터. 손으로 조작하려면 터치모니터(20~40만). <a class="lk" href="https://search.shopping.naver.com/search/all?query=24인치%20모니터" target="_blank" rel="noopener">보기 ›</a></div>
+      </li>
+      <li>
+        <div class="t"><span class="nm">⑦ 카메라 거치대·프레임</span><span class="won">5~15만</span></div>
+        <div class="d">레일 앞·뒤에 카메라 고정(알루미늄 프로파일+클램프 또는 매직암). <a class="lk" href="https://search.shopping.naver.com/search/all?query=카메라%20거치대%20매직암%20클램프" target="_blank" rel="noopener">보기 ›</a></div>
+      </li>
+      <li>
+        <div class="t"><span class="nm">⑧ 코더 연결 케이블</span><span class="won">1~3만</span></div>
+        <div class="d">Domino 코더에 꽂는 랜 또는 시리얼 케이블. <span class="opt-note">포트 확인 후 종류 확정.</span> <a class="lk" href="https://search.shopping.naver.com/search/all?query=RS232%20USB%20시리얼%20케이블" target="_blank" rel="noopener">보기 ›</a></div>
+      </li>
+      <li>
+        <div class="t"><span class="nm">⑨ 경광등·부저 <span style="color:var(--sub);font-weight:600">(선택)</span></span><span class="won">2~5만</span></div>
+        <div class="d">개수 초과 시 소리·불빛. <a class="lk" href="https://search.shopping.naver.com/search/all?query=3색%20경광등%20부저%20타워램프" target="_blank" rel="noopener">보기 ›</a></div>
+      </li>
+      <li>
+        <div class="t"><span class="nm">⑩ 태블릿 <span style="color:var(--sub);font-weight:600">(선택)</span></span><span class="won">15~25만</span></div>
+        <div class="d">사무실·이동 중 보기용. 모니터로 대체 가능. <a class="lk" href="https://search.shopping.naver.com/search/all?query=안드로이드%20태블릿%2010인치" target="_blank" rel="noopener">보기 ›</a></div>
+      </li>
+    </ul>
+
+    <div class="sum"><span>장비 합계</span><span>약 130만 ~ 240만원 <span class="small">구성에 따라</span></span></div>
+    <div class="note">· <b>최소 구성(약 130만)</b> = 저가 미니PC + USB 카메라 + 바코드 인식 기준. <b>권장 구성(약 240만)</b> = 권장 미니PC + GigE 카메라 + 조명·거치 완비.<br>· <b>개발비(우리 몫)는 별도</b> — 인식·대조 프로그램과 화면 앱. 현장 실사 후 확정 견적.<br>· 가격은 2026년 9월 시장 예상가입니다. 각 <b>‘보기’</b>를 누르면 그 자리에서 <b>실시간 최저가</b>를 볼 수 있습니다. 산업용 카메라·조명은 유통사 견적으로 최종 확정됩니다.</div>
   </div>
 
   <div class="card">
